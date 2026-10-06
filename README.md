@@ -8,7 +8,7 @@ Terraform reference implementation for core Google Cloud Platform resources, wit
 - Security by default: no state, secrets or credentials in the repository
 
 ## Roadmap
-- [ ] Cloud Storage bucket
+- [x] Cloud Storage bucket
 - [ ] CI: fmt, validate, tflint
 - [ ] VPC, subnet, firewall rules
 - [ ] Compute Engine VM
