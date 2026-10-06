@@ -1,0 +1,24 @@
+# Terraform: local state and cache
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+crash.*.log
+
+# Variable values, except the example file
+*.tfvars
+*.tfvars.json
+!terraform.tfvars.example
+
+# Local overrides
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# JSON keys (service accounts): none created, belt and braces
+*.json
+
+# Misc
+.env
