@@ -7,8 +7,18 @@ resource "google_storage_bucket" "main" {
   public_access_prevention    = "enforced" # never public
 
   force_destroy = true # allow destroy with objects inside (non-prod)
+}
 
-  labels = {
-    managed_by = "terraform"
-  }
+resource "google_compute_network" "main" {
+  name                    = "main-vpc"
+  auto_create_subnetworks = false # custom mode: subnets are declared explicitly
+}
+
+resource "google_compute_subnetwork" "main" {
+  name          = "main-subnet-${var.region}"
+  region        = var.region
+  network       = google_compute_network.main.id
+  ip_cidr_range = var.subnet_cidr
+
+  private_ip_google_access = true # reach Google APIs without an external IP
 }
