@@ -8,3 +8,9 @@ variable "region" {
   type        = string
   default     = "us-central1" # free tier eligible
 }
+
+variable "subnet_cidr" {
+  description = "Primary IPv4 range of the subnet."
+  type        = string
+  default     = "10.10.0.0/24"
+}
