@@ -1,5 +1,7 @@
 # gcp-terraform-reference
 
+[![CI](https://github.com/Clemouche347/gcp-terraform-reference/actions/workflows/ci.yml/badge.svg)](https://github.com/Clemouche347/gcp-terraform-reference/actions/workflows/ci.yml)
+
 Terraform reference implementation for core Google Cloud Platform resources, with CI checks on every change.
 
 ## Scope
@@ -9,7 +11,7 @@ Terraform reference implementation for core Google Cloud Platform resources, wit
 
 ## Roadmap
 - [x] Cloud Storage bucket
-- [ ] CI: fmt, validate, tflint
+- [x] CI: fmt, validate, tflint
 - [ ] VPC, subnet, firewall rules
 - [ ] Compute Engine VM
 - [ ] Service account and IAM
