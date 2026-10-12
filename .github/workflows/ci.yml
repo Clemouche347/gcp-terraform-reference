@@ -32,3 +32,16 @@ jobs:
 
       - name: Validate
         run: terraform validate
+
+      - name: Set up TFLint
+        uses: terraform-linters/setup-tflint@v6
+        with:
+          tflint_version: v0.64.0 # same version as local
+
+      - name: TFLint init
+        run: tflint --init
+        env:
+          GITHUB_TOKEN: ${{ github.token }} # authenticated GitHub API calls for plugin download
+
+      - name: TFLint
+        run: tflint --format compact
